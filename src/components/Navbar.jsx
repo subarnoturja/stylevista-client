@@ -1,6 +1,21 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../authprovider/AuthProvider";
 
 const Navbar = () => {
+
+    const { user, userLogout } = useContext(AuthContext);
+
+    const handleSignOut = () => {
+        userLogout()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+    }
+
   return (
     <div className="navbar bg-gray-100 bg-transparent mt-2 mb-4 rounded-full">
       <div className="navbar-start">
@@ -25,54 +40,53 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+            <NavLink>
+              <li>
+                <a>Item 1</a>
+              </li>
+            </NavLink>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <Link to="/" className="text-xl mx-4 text-bold">
+          Style Vista
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
+        <ul className="menu menu-horizontal px-1 gap-4">
+          <NavLink to="/" className="text-base">
+            <li>Home</li>
+          </NavLink>
+          <NavLink to="/about" className="text-base">
+            <li>About</li>
+          </NavLink>
+          <NavLink to="/contact-us" className="text-base">
+            <li>Contact Us</li>
+          </NavLink>
         </ul>
       </div>
       <div className="navbar-end">
-          <Link to='/registration'>
+        {user ? (
+          <div className="flex gap-4">
+            <div title={user?.displayName}>
+              <img
+                className="mt-1 w-10 rounded-full"
+                referrerPolicy="no-referrer"
+                alt="User Profile Photo"
+                src={user?.photoURL}
+              />
+            </div>
+            <button
+              className="btn btn-outline btn-accent"
+              onClick={handleSignOut}
+            >
+              Logout
+            </button>
+          </div>
+        ) : (
+          <Link to="/login">
             <button className="btn btn-success rounded-full text-white">Login</button>
           </Link>
+        )}
       </div>
     </div>
   );

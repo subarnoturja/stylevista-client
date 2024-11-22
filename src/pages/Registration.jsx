@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
@@ -86,7 +87,7 @@ const Registration = () => {
   };
 
   return (
-    <div data-aos="fade-up" className="bg-white md:h-screen">
+    <div data-aos="zoom-in" className="bg-white md:h-screen">
       <Helmet>
         <title>Style Vista | Registration</title>
       </Helmet>
@@ -103,7 +104,7 @@ const Registration = () => {
           {/* form */}
           <div className="max-w-lg w-full mx-auto">
             <div className="mb-6">
-              <h3 className="text-blue-500 md:text-3xl text-2xl font-extrabold max-md:text-center">
+              <h3 className="text-green-500 md:text-3xl text-2xl font-extrabold max-md:text-center">
                 Sign Up
               </h3>
             </div>
@@ -141,7 +142,7 @@ const Registration = () => {
                     {...register("photo")}
                     type="text"
                     className="w-full bg-transparent text-sm border-b border-gray-300 focus:border-blue-500 px-2 py-3 outline-none"
-                    placeholder="Enter password"
+                    placeholder="Photo URL"
                   />
                 </div>
               </div>
@@ -172,7 +173,7 @@ const Registration = () => {
               </div>
               <button
                 type="submit"
-                className="btn w-full py-3 px-6 text-sm tracking-wider font-semibold rounded-md bg-blue-600 hover:bg-blue-700 text-white focus:outline-none"
+                className="btn w-full py-3 px-6 text-sm tracking-wider font-semibold rounded-md bg-green-600 hover:bg-green-700 text-white focus:outline-none"
               >
                 Sign In
               </button>
@@ -182,7 +183,7 @@ const Registration = () => {
                 Already have an account?{" "}
                 <Link
                   to="/login"
-                  className="text-blue-500 font-semibold hover:underline ml-1"
+                  className="text-green-500 font-semibold hover:underline ml-1"
                 >
                   Login here
                 </Link>
