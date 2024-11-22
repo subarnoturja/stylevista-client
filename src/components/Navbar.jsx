@@ -68,7 +68,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-          <a className="btn rounded-full">Button</a>
+          <a className="btn rounded-full">Registration</a>
       </div>
     </div>
   );
