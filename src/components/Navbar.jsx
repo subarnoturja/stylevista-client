@@ -71,12 +71,11 @@ const Navbar = () => {
               <img
                 className="mt-1 w-10 rounded-full"
                 referrerPolicy="no-referrer"
-                alt="User Profile Photo"
-                src={user?.photoURL}
+                src={user?.photoURL || "/public/user.png"}
               />
             </div>
             <button
-              className="btn btn-outline btn-accent"
+              className="btn btn-success rounded-full text-white"
               onClick={handleSignOut}
             >
               Logout
