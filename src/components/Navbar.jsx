@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-gray-100 bg-transparent mt-2 mb-4 rounded-full">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -68,7 +68,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-          <a className="btn">Button</a>
+          <a className="btn rounded-full">Button</a>
       </div>
     </div>
   );
