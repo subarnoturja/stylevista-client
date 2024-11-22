@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <div className="navbar bg-gray-100 bg-transparent mt-2 mb-4 rounded-full">
@@ -68,7 +70,9 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-          <a className="btn rounded-full">Registration</a>
+          <Link to='/registration'>
+            <button className="btn btn-success rounded-full text-white">Login</button>
+          </Link>
       </div>
     </div>
   );

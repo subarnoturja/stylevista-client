@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
-import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Bounce, toast } from "react-toastify";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
+import { AuthContext } from "../authprovider/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const Registration = () => {
   const { createUser } = useContext(AuthContext);
@@ -88,7 +88,7 @@ const Registration = () => {
   return (
     <div data-aos="fade-up" className="bg-white md:h-screen">
       <Helmet>
-        <title>QuickRent | Registration</title>
+        <title>Style Vista | Registration</title>
       </Helmet>
       <div className="grid md:grid-cols-2 items-center gap-8 h-full">
         <div className="max-md:order-1 p-2 h-full">
