@@ -3,6 +3,7 @@ import AOS from "aos";
 import Banner from "../components/Banner";
 import Categories from "../components/Categories";
 import Testimonials from "../components/Testimonials";
+import FAQ from "../components/FAQ";
 
 const Home = () => {
 
@@ -20,6 +21,7 @@ const Home = () => {
             <Banner></Banner>
             <Categories></Categories>
             <Testimonials></Testimonials>
+            <FAQ></FAQ>
         </div>
     );
 };

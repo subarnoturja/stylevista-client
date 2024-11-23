@@ -1,7 +1,7 @@
 
 const Testimonials = () => {
   return (
-    <section className="my-8 dark:text-gray-800">
+    <section data-aos="zoom-out" className="my-8 dark:text-gray-800">
       <div className="container flex flex-col items-center mx-auto mb-12 md:p-10 md:px-12">
         <h1 className="p-4 text-4xl font-semibold leading-none text-center">
           What our customers are saying about us
