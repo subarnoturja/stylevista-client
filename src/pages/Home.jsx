@@ -4,6 +4,7 @@ import Banner from "../components/Banner";
 import Categories from "../components/Categories";
 import Testimonials from "../components/Testimonials";
 import FAQ from "../components/FAQ";
+import ContactUS from "../components/ContactUS";
 
 const Home = () => {
 
@@ -22,6 +23,7 @@ const Home = () => {
             <Categories></Categories>
             <Testimonials></Testimonials>
             <FAQ></FAQ>
+            <ContactUS></ContactUS>
         </div>
     );
 };
