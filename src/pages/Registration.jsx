@@ -41,8 +41,8 @@ const Registration = () => {
       return;
     }
 
-    if (!/^(?=.*[a-z])(?=.*[A-Z]).+$/.test(password)) {
-      toast.error("Assign lower and upper case", {
+    if (!/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/.test(password)) {
+      toast.error("Assign Upper, lower, special character and number", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
