@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import Banner from "../components/Banner";
+import Categories from "../components/Categories";
 
 const Home = () => {
 
@@ -16,6 +17,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <Categories></Categories>
         </div>
     );
 };
