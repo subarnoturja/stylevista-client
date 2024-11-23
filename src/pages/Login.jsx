@@ -13,6 +13,7 @@ const Login = () => {
   const [show, setShow] = useState(false);
   const navigate = useNavigate()
 
+  // Password Toogle Handling
   const handleShow = () => {
     setShow(!show);
   };
@@ -23,6 +24,7 @@ const Login = () => {
     formState: { errors },
   } = useForm();
 
+  // Form Submission 
   const onSubmit = (data) => {
     const { email, password } = data;
 

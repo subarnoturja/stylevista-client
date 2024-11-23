@@ -8,7 +8,8 @@ import ContactUS from "../components/ContactUS";
 
 const Home = () => {
 
-    useEffect(() => {
+  // AOS Animation
+  useEffect(() => {
         AOS.init({
           offset: 200,
           duration: 800,

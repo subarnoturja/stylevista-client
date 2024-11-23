@@ -5,6 +5,7 @@ import { AuthContext } from "../authprovider/AuthProvider";
 const Navbar = () => {
   const { user, userLogout } = useContext(AuthContext);
 
+  // Logout Handling
   const handleSignOut = () => {
     userLogout()
       .then((result) => {
@@ -68,6 +69,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
+        {/* Logout and Login toggle for registered user */}
         {user ? (
           <div className="flex gap-4">
             <div title={user?.displayName}>

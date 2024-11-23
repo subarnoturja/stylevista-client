@@ -1,10 +1,10 @@
 
 const Testimonials = () => {
   return (
-    <section data-aos="zoom-out" className="my-8 dark:text-gray-800">
-      <div className="container flex flex-col items-center mx-auto mb-12 md:p-10 md:px-12">
+    <section data-aos="zoom-out" className="my-8 dark:text-gray-800 mb-10">
+      <div className="container flex flex-col items-center mx-auto mb-4 md:p-10 md:px-12">
         <h1 className="p-4 text-4xl font-semibold leading-none text-center">
-          What our customers are saying about us
+          Testimonials
         </h1>
       </div>
       <div className="container flex flex-col items-center justify-center mx-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:px-10">

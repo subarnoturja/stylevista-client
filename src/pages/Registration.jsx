@@ -56,6 +56,7 @@ const Registration = () => {
       return;
     }
 
+    // Handling User Creation
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
@@ -136,17 +137,6 @@ const Registration = () => {
                   )}
                 </div>
               </div>
-              <div className="mt-4">
-                <label className="text-black text-sm block mb-2">Photo</label>
-                <div className="relative flex items-center">
-                  <input
-                    {...register("photo")}
-                    type="text"
-                    className="w-full bg-transparent text-sm border-b border-gray-300 focus:border-blue-500 px-2 py-3 outline-none"
-                    placeholder="Photo URL"
-                  />
-                </div>
-              </div>
               <div className="mt-4 mb-6">
                 <label className="text-black text-sm block mb-2">
                   Password
@@ -171,6 +161,25 @@ const Registration = () => {
                     )}
                   </p>
                 </div>
+              </div>
+              <div className="mt-4 mb-6">
+              <div className="form-control">
+              <label className="label">
+                <span className="label-text">Role</span>
+              </label>
+              <select
+                className="select select-bordered max-w-full"
+                {...register("role", { required: true })}
+              >
+                <option value="buyer">buyer</option>
+                <option value="seller">seller</option>
+              </select>
+              {errors.role && (
+                <p className="text-red-500 text-sm font-light">
+                  You must select a role
+                </p>
+              )}
+            </div>
               </div>
               <button
                 type="submit"
