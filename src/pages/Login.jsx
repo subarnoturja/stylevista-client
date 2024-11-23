@@ -79,7 +79,7 @@ const Login = () => {
   };
 
   return (
-    <div data-aos="fade-up">
+    <div data-aos="zoom-in">
       <Helmet>
         <title>Style Vista | Login</title>
       </Helmet>
@@ -88,7 +88,7 @@ const Login = () => {
           <div className="md:max-w-md w-full px-4 py-4">
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="mb-12">
-                <h3 className="text-gray-800 text-3xl font-extrabold">
+                <h3 className="text-violet-600 text-3xl font-extrabold">
                   Sign in
                 </h3>
               </div>
@@ -139,7 +139,7 @@ const Login = () => {
                 New Here? {" "}
                 <Link
                   to="/registration"
-                  className="text-green-500 font-semibold hover:underline ml-1 whitespace-nowrap"
+                  className="text-violet-600 font-semibold hover:underline ml-1 whitespace-nowrap"
                 >
                   Register here
                 </Link>
@@ -147,7 +147,7 @@ const Login = () => {
               <div className="mt-12">
                 <button
                   type="submit"
-                  className="btn w-full shadow-xl py-2.5 px-4 text-sm tracking-wide rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none"
+                  className="btn w-full shadow-xl py-2.5 px-4 text-sm tracking-wide rounded-md text-white bg-violet-600 hover:bg-violet-800 focus:outline-none"
                 >
                   Sign in
                 </button>

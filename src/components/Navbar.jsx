@@ -3,18 +3,17 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../authprovider/AuthProvider";
 
 const Navbar = () => {
+  const { user, userLogout } = useContext(AuthContext);
 
-    const { user, userLogout } = useContext(AuthContext);
-
-    const handleSignOut = () => {
-        userLogout()
+  const handleSignOut = () => {
+    userLogout()
       .then((result) => {
         console.log(result.user);
       })
       .catch((error) => {
         console.log(error.message);
       });
-    }
+  };
 
   return (
     <div className="navbar bg-gray-100 bg-transparent mt-2 mb-4 rounded-full">
@@ -40,10 +39,14 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-            <NavLink>
-              <li>
-                <a>Item 1</a>
-              </li>
+            <NavLink to="/" className="text-base">
+              <li>Home</li>
+            </NavLink>
+            <NavLink to="/about" className="text-base">
+              <li>About</li>
+            </NavLink>
+            <NavLink to="/contact-us" className="text-base">
+              <li>Contact Us</li>
             </NavLink>
           </ul>
         </div>
@@ -83,7 +86,9 @@ const Navbar = () => {
           </div>
         ) : (
           <Link to="/login">
-            <button className="btn btn-success rounded-full text-white">Login</button>
+            <button className="btn bg-violet-600 rounded-full text-white">
+              Login
+            </button>
           </Link>
         )}
       </div>

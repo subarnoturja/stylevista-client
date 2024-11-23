@@ -8,10 +8,10 @@ import { AuthContext } from "../authprovider/AuthProvider";
 import { Helmet } from "react-helmet";
 
 const Registration = () => {
-  const { createUser } = useContext(AuthContext);
-
+  const { createUser, setUser, googleLogin } = useContext(AuthContext);
   const [show, setShow] = useState(false);
 
+//   Password Toggle Handle
   const handleShow = () => {
     setShow(!show);
   };
@@ -22,6 +22,7 @@ const Registration = () => {
     formState: { errors },
   } = useForm();
 
+//   Form and User Control
   const onSubmit = (data) => {
     const { fullName, email, photo, password } = data;
 
@@ -83,8 +84,8 @@ const Registration = () => {
           theme: "light",
           transition: Bounce,
         });
-      });
-  };
+    });    
+};
 
   return (
     <div data-aos="zoom-in" className="bg-white md:h-screen">
@@ -104,7 +105,7 @@ const Registration = () => {
           {/* form */}
           <div className="max-w-lg w-full mx-auto">
             <div className="mb-6">
-              <h3 className="text-green-500 md:text-3xl text-2xl font-extrabold max-md:text-center">
+              <h3 className="text-violet-600 md:text-3xl text-2xl font-extrabold max-md:text-center">
                 Sign Up
               </h3>
             </div>
@@ -173,7 +174,7 @@ const Registration = () => {
               </div>
               <button
                 type="submit"
-                className="btn w-full py-3 px-6 text-sm tracking-wider font-semibold rounded-md bg-green-600 hover:bg-green-700 text-white focus:outline-none"
+                className="btn w-full py-3 px-6 text-sm tracking-wider font-semibold rounded-md bg-violet-600 hover:bg-violet-800 text-white focus:outline-none"
               >
                 Sign In
               </button>
@@ -183,7 +184,7 @@ const Registration = () => {
                 Already have an account?{" "}
                 <Link
                   to="/login"
-                  className="text-green-500 font-semibold hover:underline ml-1"
+                  className="text-violet-600 font-semibold hover:underline ml-1"
                 >
                   Login here
                 </Link>
