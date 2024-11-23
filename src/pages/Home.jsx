@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import Banner from "../components/Banner";
 import Categories from "../components/Categories";
+import Testimonials from "../components/Testimonials";
 
 const Home = () => {
 
@@ -18,6 +19,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Categories></Categories>
+            <Testimonials></Testimonials>
         </div>
     );
 };

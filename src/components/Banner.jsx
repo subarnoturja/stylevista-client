@@ -6,7 +6,7 @@ const Banner = () => {
           <img
             src="/public/banner.jpg"
             alt=""
-            className="object-contain rounded-2xl h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
+            className="object-contain rounded-2xl h-80 lg:h-96 xl:h-112 2xl:h-128"
           />
         </div>
         <div className="flex flex-col justify-center p-4 text-center rounded-sm lg:max-w-full xl:max-w-lg lg:text-left">
